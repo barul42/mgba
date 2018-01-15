@@ -254,5 +254,6 @@ void usage(const char* arg0, const char* extraOptions) {
 }
 
 void version(const char* arg0) {
-	printf("%s %s (%s)\n", arg0, projectVersion, gitCommit);
+//	printf("%s %s (%s)\n", arg0, projectVersion, gitCommit);
+	printf("%s %s (%s)\n", arg0, projectVersion, gitCommitShort)
 }
