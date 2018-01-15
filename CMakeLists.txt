@@ -997,3 +997,9 @@ if(NOT QUIET)
 	message(STATUS "	Static: ${BUILD_STATIC}")
 	message(STATUS "	Shared: ${BUILD_SHARED}")
 endif()
+
+
+# testing stuff
+add_definitions("-DGIT_COMMIT=${GIT_COMMIT}")
+add_definitions("-DGIT_COMMIT_SHORT=${GIT_COMMIT_SHORT}")
+
