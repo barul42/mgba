@@ -17,6 +17,10 @@ if(GIT AND NOT SKIP_GIT)
 	execute_process(COMMAND ${GIT} describe --tag --exact-match WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}" OUTPUT_VARIABLE "${GIT_TAG}" ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)
 endif()
 
+# testing stuff
+add_definitions("-DGIT_COMMIT=${GIT_COMMIT}")
+add_definitions("-DGIT_COMMIT_SHORT=${GIT_COMMIT_SHORT}")
+
 if(NOT GIT_REV)
 	set(GIT_REV -1)
 endif()
