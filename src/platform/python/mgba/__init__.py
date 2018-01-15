@@ -18,7 +18,7 @@ def createCallback(structName, cbName, funcName=None):
 
 version = ffi.string(lib.projectVersion).decode('utf-8')
 
-GitInfo = namedtuple("GitInfo", "commit commitShort branch revision")
+GitInfo = namedtuple('GitInfo', 'commit commitShort branch revision')
 
 git = {}
 if lib.gitCommit and lib.gitCommit != "(unknown)":
