@@ -21,13 +21,13 @@ version = ffi.string(lib.projectVersion).decode('utf-8')
 GitInfo = namedtuple("GitInfo", "commit commitShort branch revision")
 
 git = {}
-if lib.gitCommit and lib.gitCommit != "(unknown)":
+#if lib.gitCommit and lib.gitCommit != "(unknown)":
     git['commit'] = ffi.string(lib.gitCommit).decode('utf-8')
-if lib.gitCommitShort and lib.gitCommitShort != "(unknown)":
+#if lib.gitCommitShort and lib.gitCommitShort != "(unknown)":
     git['commitShort'] = ffi.string(lib.gitCommitShort).decode('utf-8')
-if lib.gitBranch and lib.gitBranch != "(unknown)":
+#if lib.gitBranch and lib.gitBranch != "(unknown)":
     git['branch'] = ffi.string(lib.gitBranch).decode('utf-8')
-if lib.gitRevision > 0:
+#if lib.gitRevision > 0:
     git['revision'] = lib.gitRevision
 
 git = GitInfo(**git)
